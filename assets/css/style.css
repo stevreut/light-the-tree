@@ -1,0 +1,150 @@
+/* https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+
+:root {
+    --radio-checked-color: #ff6464;
+}
+* {
+    margin: 15px;
+    background-color: #14271a;
+    color: #8de5b1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: dotted 1px #526d5e;  */
+}
+/* TODO : What does this box-sizing actually do? */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body {
+    position: absolute;
+    z-index: -1;
+}
+button {
+    background-color: #2b4935;
+    color:#53c178;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #90e2ac;
+}
+input {
+    background-color: #3d5244;
+    color:#53c178;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.outerdiv {
+    display: inline-block;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    border-radius: 8px;
+    /* background-color: blue; */
+    z-index: 1;
+    /* width: 30%; */
+}
+.offfloat {
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 20px; /* TODO */
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 25%;
+}
+.offfloat:hover {
+    opacity: 80%;
+}
+.radcont {  /* radio box container */
+    display: grid;
+    grid-template-columns: 10em 10em;
+}
+.labeled-radio {
+    font-family: system-ui, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 1.1em;
+}
+input[type="radio"] {
+    /* Add if not using autoprefixer ( TODO ? ) */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #598056;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid currentColor;
+    border-radius: 35%;    
+    transform: translateY(-0.1em);
+    display: grid;
+    place-content: center;
+}
+input[type="radio"]::before {
+    content: "";  /* needed to hide default - making custom visible */
+    width: 0.9em;
+    height: 0.9em;
+    border-radius: 30%;
+    transform: scale(0);  /* check is "displayed" but with size = 0 */
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--radio-checked-color);
+    /* for Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+input[type="radio"]:checked::before {
+    transform: scale(1)
+}
+input[type="radio"]:hover {  
+    outline: max(2px, 0.15em) solid #26575c;
+    outline-offset: max(2px, 0.15em);
+}
+.labeled-radio + .labeled-radio {
+    margin-top: 1em;
+}
+button:active {
+    background-color: var(--radio-checked-color);
+    color: #000;
+}
+button:disabled,
+button[disabled] {
+    background-color: #14271a;
+    color: #14501a;
+}
+h1 {
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 25px #8fe;
+}
+h3 {
+    margin-top: 30px
+}
+canvas {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: -1;
+    margin-left: 0px;
+    border: solid 2px #000;
+    border-radius: 8px;
+    padding: 40px;
+    background-color: #081208;
+}
+.dim {
+    color: #21391e;
+    text-shadow: none;
+}
+label {
+    padding: 10px;
+    border: solid 1px #205d34;
+    border-radius: 8px;
+}

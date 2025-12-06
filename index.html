@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting the Tree</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="outerdiv">
+    <h1>Let's Light the Tree</h1>
+    <p>
+        <button id="offbtn" disabled="true">Unplug the Lights</button>
+        <button id="lbtn">Plug in the Lights</button>
+    </p>
+    <div class="offfloat">
+        <button id="offbtn2">Unplug the Lights</button>
+    </div>
+    <h3>Color Palette</h3>
+    <div class="radcont">
+    <label class="labeled-radio">
+        <input type="radio" name="paletteoption" opt="std" checked="checked">
+        Traditional
+    </label>
+    <label class="labeled-radio">
+        <input type="radio" name="paletteoption" opt="pstl">
+        Pastel
+    </label>
+    </div>
+    </div>
+    <p><canvas id="lights" width="640" height="500"></canvas></p>
+    <script type=module src="./assets/js/script.js"></script>
+</body>
+</html>
