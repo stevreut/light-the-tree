@@ -51,10 +51,12 @@ accomplished via an object-oriented design that rests on two classes:
 - *LightBulb* - a class representing a single light, which has a location
 (in three dimensions), a color, and parameters which govern the rate at
 which it blinks on and off.
-
 - *LightBulbArray* - a class representing the all lights (instances of 
+
 LightBulb) collectively.  This is the class which randomly generates the lights, turns all the lights on or off, and renders them on the 
 canvas. 
+
+*X*
 
 # License.
 
