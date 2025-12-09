@@ -56,8 +56,6 @@ which it blinks on and off.
 LightBulb) collectively.  This is the class which randomly generates the lights, turns all the lights on or off, and renders them on the 
 canvas. 
 
-*X*
-
 # License.
 
 https://opensource.org/license/mit/ 
