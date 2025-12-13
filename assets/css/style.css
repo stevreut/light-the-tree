@@ -43,16 +43,14 @@ input {
     top: 80px;
     left: 80px;
     border-radius: 8px;
-    /* background-color: blue; */
     z-index: 1;
-    /* width: 30%; */
 }
 .offfloat {
     display: inline-block;
     position: absolute;
     z-index: 3;
     top: 20px;
-    left: 20px; /* TODO */
+    left: 20px;
     border-radius: 8px;
     visibility: hidden;
     opacity: 25%;
@@ -147,4 +145,20 @@ label {
     padding: 10px;
     border: solid 1px #205d34;
     border-radius: 8px;
+}
+@media only screen and (max-width: 640px) {
+    canvas {
+        top: -30px;
+        left: -30px;
+        padding: 10px;
+        margin: 0px;
+        background-color: #000;
+    }
+    .outerdiv {
+        top: -25px;
+        left: -25px;
+        margin: 15px;
+        padding: 12px;
+        background-color: #000;
+    }
 }

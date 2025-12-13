@@ -71,6 +71,10 @@ function setUpLights(paletteOption) {
     // reasonable margins.
     canv.width = window.innerWidth - 185
     canv.height = window.innerHeight - canv.offsetTop - 150
+    if (window.innerWidth <= 640) {  // parallels media query code for smaller devices
+        canv.width += 30;
+        canv.height += 100;
+    }
     // wid, hgt are convenience variables and contain the width and height
     // in pixels of the canvas based on the attributes provided on the page
     const wid = canv.width
