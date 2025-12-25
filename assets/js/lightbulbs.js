@@ -136,7 +136,6 @@ class LightBulbArray {
         const frameCount = this.frameSet.length
         this.timerElements = []
         for (let frameNum=0;frameNum<frameCount;frameNum++) {
-            frameNum++;
             frameNum %= frameCount;
             let frame = this.frameSet[frameNum];
             let {ms} = frame

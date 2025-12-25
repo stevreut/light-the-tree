@@ -2,6 +2,8 @@ import { LightBulbArray } from "./lightbulbs.js"
 
 const BULB_COUNT = 30;
 
+const MINI_WIDTH_THRESHOLD = 640;
+
 let lightButton = null;  // button element
 let offButton = null;    //    "
 let offButton2 = null;   //    ""
@@ -71,9 +73,9 @@ function setUpLights(paletteOption) {
     // reasonable margins.
     canv.width = window.innerWidth - 185
     canv.height = window.innerHeight - canv.offsetTop - 150
-    if (window.innerWidth <= 640) {  // parallels media query code for smaller devices
+    if (window.innerWidth <= MINI_WIDTH_THRESHOLD) {  // parallels media query code for smaller devices
         canv.width += 145;
-        canv.height += 100;
+        canv.height += 80;
     }
     // wid, hgt are convenience variables and contain the width and height
     // in pixels of the canvas based on the attributes provided on the page

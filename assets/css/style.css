@@ -8,7 +8,6 @@
     background-color: #14271a;
     color: #8de5b1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* border: dotted 1px #526d5e;  */
 }
 /* TODO : What does this box-sizing actually do? */
 *,
@@ -53,7 +52,7 @@ input {
     left: 20px;
     border-radius: 8px;
     visibility: hidden;
-    opacity: 25%;
+    opacity: 15%;
 }
 .offfloat:hover {
     opacity: 80%;
@@ -147,6 +146,12 @@ label {
     border-radius: 8px;
 }
 @media only screen and (max-width: 640px) {
+    /* max-width should match MINI_WIDTH_THRESHOLD 
+    in script.js */ 
+    * {
+        background-color: #000;
+        margin: 19px;
+    }
     canvas {
         top: -30px;
         left: -30px;
